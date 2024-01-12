@@ -1,0 +1,129 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set text color for the entire page */
+  body {
+    color: #fff; /* Text color for the entire page */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Center the content vertically and horizontally */
+  body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8e0000, #000); /* Gradient background color */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  /* Style the container */
+  .container {
+    background: linear-gradient(135deg, #333, #2c3e50);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Adjust the width as needed */
+    animation: gradientChange 4s ease infinite;
+  }
+  
+  @keyframes gradientChange {
+    0% {
+      background: linear-gradient(135deg, #333, #5b020e);
+    }
+    25% {
+      background: linear-gradient(135deg, #333, #01312d);
+    }
+    50% {
+      background: linear-gradient(135deg, #333, #050246);
+    }
+    75% {
+      background: linear-gradient(135deg, #333, #3b3302);
+    }
+    100% {
+      background: linear-gradient(135deg, #333, #040101);
+    }
+  }
+  
+  /* Add animation for input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent black background */
+    border: 1px solid #0f0202;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #8f1204;
+    transform: scale(1.02);
+  }
+  
+  /* Add animation for submit button */
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  /* Style the text color in the form */
+  label {
+    color: #fff; /* Match the input fields' text color */
+  }
+  
+  /* Style the "Sign Up" text */
+  .container h1 {
+    color: #fff; /* White color for the "Sign Up" text */
+    font-weight: bold;
+  }
+  
+  /* Add animation for form elements */
+  .form-group {
+    animation: fadeInUp 1s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add animation for form submission success */
+  .success-message {
+    color: #00ff00;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Apply animation when form submission is successful */
+  .container.success .success-message {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

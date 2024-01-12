@@ -1,0 +1,43 @@
+.header-section {
+    background-color: blue; /* Add your desired background color */
+    padding: 20px;
+}
+
+.white-text {
+    color: white;
+}
+
+body, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #faf1f1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

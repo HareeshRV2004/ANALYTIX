@@ -1,0 +1,131 @@
+header h1 {
+  color: white;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+#review-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ratings input[type="radio"] {
+  display: none;
+}
+
+.ratings label {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.ratings label::before {
+  content: "\2605";
+  font-size: 20px;
+}
+
+.ratings input[type="radio"]:checked + label::before {
+  color: #f39c12;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  #review-form {
+    max-width: 90%;
+  }
+}
+
+
+
+.nps input[type="radio"] {
+  display: none;
+}
+
+.nps label {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.nps label::before {
+  content: "\2605";
+  font-size: 20px;
+}
+
+.nps input[type="radio"]:checked + label::before {
+  color: #f39c12;
+}
+
+
+.rsponse_time input[type="radio"] {
+  display: none;
+}
+
+.rsponse_time label {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.rsponse_time label::before {
+  content: "\2605";
+  font-size: 20px;
+}
+
+.rsponse_time input[type="radio"]:checked + label::before {
+  color: #f39c12;
+}

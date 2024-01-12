@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 20px;
+}/* Reset some default margin and padding */
+/* Reset some default margin and padding */
+body, h1, ul, li, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a gradient background */
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, red, black);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style for the container */
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Style for the company list */
+  .posts {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Style for each company item */
+  .post {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Style for company name */
+  .post h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white; /* Apply bright white color */
+  }
+  
+  /* Style for review link */
+  .post a {
+    color: #ff6b6b;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  /* Style for category and description */
+  .post p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white; /* Apply bright white color */
+  }
+  
+  /* Style for website link */
+  .post a:last-child {
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Change link color on hover */
+  .post a:hover {
+    color: #ffd700;
+  }
+  
+  /* Style for the "Company Blogger" text */
+  .container h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+         
