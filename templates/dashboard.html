@@ -1,0 +1,68 @@
+{%extends "base.html" %}
+{%block title%}
+{%endblock%}
+{%block content%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviews Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222; /* Dark background for better contrast */
+            color: #5cc8e3; /* Bright white text color */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color:#5cc8e3; /* Bright white text color for table */
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        img {
+            width: 68vh;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reviews Dashboard</h1>
+    <table>
+        <tr>
+            <th>S.NO</th>
+            <th>Company Photo</th>
+            <th>REVIEWER AGE</th>
+            <th>Advantages</th>
+            <th>DISADVANTAGE</th>
+            <th>IMPROVEMENTS</th>
+            <th>RATINGS</th>
+        </tr>
+        {% for review in reviews %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td><a href="{{ url_for('serve_image', filename=review.cname + '_' + review.xname + '.jpg') }}" target="_blank"><img src="{{ url_for('serve_image', filename=review.cname + '_' + review.xname + '.jpg') }}" alt="{{ review.cname }}" width="100"></a></td>
+            <td>{{ review.age }}</td>
+            <td>{{ review.advantages }}</td>
+            <td>{{ review.disadvantages }}</td>
+            <td>{{ review.improvements }}</td>
+            <td>{{ review.ratings}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<h1>Our Analysis :</h1>
+</body>
+<body>
+    <img src="{{ url_for('static', filename='ratings.png') }}" alt="Rating Graph">
+</body>
+<body>
+    <img src="{{ url_for('static', filename='nps.png') }}" alt="nps Rating Graph">
+</body>
+<body>
+    <img src="{{ url_for('static', filename='response.png') }}" alt="response time Rating Graph">
+</body>
+<!-- Add this form to allow companies to submit questions -->
+</html>
+{%endblock%}

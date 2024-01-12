@@ -1,0 +1,39 @@
+{%extends "base.html" %}
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='company_details.css') }}">
+    <title>Feedback Analyzing Website</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Analyzing Website</h1>
+        <form action="/company_detail" method="POST" }}">
+
+            <label for="cname">Company Name:</label>
+            <input type="text" name="cname" id="cname" value="{{company_name}}" required>
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+                <option value="Service-Based IT Company">Service-Based IT Company</option>
+                <option value="Product-Based IT Company">Product-Based IT Company</option>
+                <option value="Bank">Bank</option>
+                <option value="Online Startup">Online Startup</option>
+            </select>
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" rows="4" required></textarea>
+            <label for="website">Website Link:</label>
+            <input type="url" name="website" id="website">
+           
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+{%endblock%}

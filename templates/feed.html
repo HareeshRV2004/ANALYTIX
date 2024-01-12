@@ -1,0 +1,39 @@
+{%extends "base.html"%}
+{% block title %} HOME
+{% endblock %}
+{% block  content%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Feedback System</h1>
+        <p>Collecting valuable feedback to improve products and services.</p>
+        <div class="signup-box">
+            <h2>User Access</h2>
+            <form action="{{ url_for('home') }}" method="post">
+                <textarea name="review" placeholder="enter your name" required></textarea><br>
+                <textarea name="pass" placeholder="password" required></textarea><br>
+                <textarea name="email" placeholder="enter mail id" required></textarea>
+                <button type="submit">SIGN UP</button>
+            </form>
+        </div>
+        <div class="signup-box">
+            <h2>Company Access</h2>
+            <form action="{{ url_for('home') }}" method="post">
+                <textarea name="company_code" placeholder="enter your name" required></textarea><br>
+                <textarea name="pass1" placeholder="password" required></textarea><br>
+                <textarea name="email1" placeholder="enter mail id" required></textarea>
+                <button type="submit">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+	
+	
+{% endblock %}

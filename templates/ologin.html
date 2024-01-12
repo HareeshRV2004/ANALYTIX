@@ -1,0 +1,24 @@
+{%  extends "base.html" %}
+{%block title%}
+{%endblock %}
+{%block content%}
+	{%with messages=get_flashed_messages()%}
+		{%if messages %}
+			{% for msg in messages %}
+				<p>{{msg}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+
+
+<form   action ="/ologin" method="POST" >
+	<p><font color="black"><b>COMPANYNAME:  </b>
+	<input type="text"  name="nm" placeholder="Enter name"  /></p>
+    
+	<p><b>PASSWORD: </b>:<input type="password" placeholder ="Enter password" name="ps" required>
+	<p><font color="black"><input style="background-color:gold;" type="submit" value="submit"/></p>
+
+</form>
+
+{%endblock%}

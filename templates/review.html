@@ -1,0 +1,97 @@
+{%extends "base.html" %}
+{%block title%}
+{%endblock%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='review.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Leave a Review</h1>
+  </header>
+  
+  <section id="review-form">
+    <form action="{{ url_for('submit_review') }}" method="POST" enctype="multipart/form-data">
+      <label for="cname">Company Name:</label>
+      <select id="cname" name="cname" required>
+        <option value="" disabled selected>Select a Company</option>
+        {% for company in companies %}
+          <option value="{{ company.cname }}">{{ company.cname }}</option>
+        {% endfor %}
+      </select>
+    
+      <label for="xname">User Name:</label>
+      <input type="text" id="xname" name="xname" value="{{ ucompany_name }}" required>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+     
+      <label for="ratings">Ratings:</label>
+      <div class="ratings">
+        <input type="radio" id="rating5" name="ratings" value="5">
+        <label for="rating5">5 Stars</label>
+        <input type="radio" id="rating4" name="ratings" value="4">
+        <label for="rating4">4 Stars</label>
+        <input type="radio" id="rating3" name="ratings" value="3">
+        <label for="rating3">3 Stars</label>
+        <input type="radio" id="rating2" name="ratings" value="2">
+        <label for="rating2">2 Stars</label>
+        <input type="radio" id="rating1" name="ratings" value="1">
+        <label for="rating1">1 Star</label>
+      </div>
+
+      <label for="rsponse_time">Response Time:</label>
+      <div class="rsponse_time">  
+        <input type="radio" id="rsponse_time5" name="rsponse_time" value="5">
+        <label for="rsponse_time5">5 Stars</label>
+        <input type="radio" id="rsponse_time4" name="rsponse_time" value="4">
+        <label for="rsponse_time4">4 Stars</label>
+        <input type="radio" id="rsponse_time3" name="rsponse_time" value="3">
+        <label for="rsponse_time3">3 Stars</label>
+        <input type="radio" id="rsponse_time2" name="rsponse_time" value="2">
+        <label for="rsponse_time2">2 Stars</label>
+        <input type="radio" id="rsponse_time1" name="rsponse_time" value="1">
+        <label for="rsponse_time1">1 Star</label>
+      </div>
+
+      <label for="nps">Net Promoter Score(will you recommend to others):</label>
+      <div class="nps">
+        <input type="radio" id="nps5" name="nps" value="5">
+        <label for="nps5">5 Stars</label>
+        <input type="radio" id="nps4" name="nps" value="4">
+        <label for="nps4">4 Stars</label>
+        <input type="radio" id="nps3" name="nps" value="3">
+        <label for="nps3">3 Stars</label>
+        <input type="radio" id="nps2" name="nps" value="2">
+        <label for="nps2">2 Stars</label>
+        <input type="radio" id="nps1" name="nps" value="1">
+        <label for="nps1">1 Star</label>
+      </div>
+      
+      <label for="advantages">Advantages:</label>
+      <textarea id="advantages" name="advantages" rows="4" required></textarea>
+      
+      <label for="disadvantages">Disadvantages:</label>
+      <textarea id="disadvantages" name="disadvantages" rows="4" required></textarea>
+      
+      <label for="improvements">Improvements Needed:</label>
+      <textarea id="improvements" name="improvements" rows="4" required></textarea>
+      
+      <label for="proof">Upload Photo Proof:</label>
+      <input type="file" id="proof" name="proof" accept="image/*">
+      
+      <button type="submit">Submit Review</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 ANALYTIX. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+{%endblock%}

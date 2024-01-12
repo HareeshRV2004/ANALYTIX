@@ -1,0 +1,84 @@
+{%extends "base.html" %}
+{%block title%}
+{%endblock%}
+{%block content%}
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+
+  
+  <section id="hero">
+    <h1>Welcome to Analytix</h1>
+    <p>Your trusted partner for exceptional services</p>
+  
+  </section>
+  
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Analytix, we believe that every voice matters. Our journey began with a simple yet powerful idea: to transform feedback into actionable<br> 
+      insights.We understand the importance of genuine opinions and the impact they can have on individuals and businesses alike.Our team is<br>
+      dedicated to bridging the gap between feedback and analysis.We've crafted a platform that not only collects feedback but also delves deep<br>
+      into its nuances to uncover hidden gems of wisdom. Whether you're a passionate individual who wants to contribute your thoughts or a<br>
+      forward-thinking company in pursuit of excellence,we're here to guide you on this journey.<br></p>
+  </section>
+  
+  <section id="features">
+    <h2>Our Special Features</h2>
+    <ul>
+      <li><h2>Rating and Review System:</h2>
+      <p>Implement a rating and review system where users can provide detailed feedback<br>
+       along with star ratings, allowing companies to understand customer satisfaction levels.</p></li>
+      <li><h2>Data Visualization:</h2>       
+      <p>Present feedback data in the form of graphs, charts, and visualizations to make it easier
+      for companies to understand patterns and trends.</p></li>
+    </ul>
+  </section>
+  
+  <section id="trust">
+    <h2>Why Choose Us</h2>
+    <p>
+      <li>Trusted by thousands of satisfied customers</li>
+      <li>Ensuring the safety and security of your information</li>
+      <li>Offering the lowest prices without compromising quality</li>
+    </ul>
+  </section>
+  
+  <section id="reward">
+    <p>Share your experience about our website</p><br>
+    <form action="{{ url_for('feedback1') }}" method="POST"><br>
+      <input type="text" fname="fname" placeholder="Your Name" required><br>
+      <textarea name="feedback" placeholder="Your Feedback" required></textarea><br>
+      <button type="submit">Submit Feedback</button><br>
+    </form>
+  </section>
+  
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <a href = "/privacy" class="button"> click here</ahref>
+  </section>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <footer>
+    <p>&copy; 2023 ANALYTIX. All rights reserved.</p>
+  </footer>
+  <script>
+    // Smooth scrolling effect for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+{%endblock%}
+

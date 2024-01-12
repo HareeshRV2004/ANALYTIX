@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{{ category_name }}</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ category_name }}</h1>
+        <ul>
+            {% for company in companies %}
+            <li>
+                <h2>{{ company.name }}</h2>
+                <p>{{ company.description }}</p>
+                <a href="{{ company.website }}" target="_blank">{{ company.website }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('index') }}">Go back to Home</a>
+    </div>
+</body>
+</html>

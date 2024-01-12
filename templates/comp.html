@@ -1,0 +1,29 @@
+{%extends "base.html" %}
+{%block title%}
+{%endblock%}
+{%block content%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Blogger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='comp.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Company Blogger</h1>
+        <a href="{{ url_for('base')}}">Review</a>
+        <ul class="posts">
+            {% for company in companies %}
+                <li class="post">
+                    <h2>{{ company.cname }}</h2>
+                    
+                    <p>{{ company.category }}</p>
+                    <p>{{ company.description }}</p>
+                    <a href="{{ company.website_link }}" target="_blank">{{ company.website }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+{%endblock%}

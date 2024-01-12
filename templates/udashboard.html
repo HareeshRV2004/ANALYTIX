@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}
+{% endblock %}
+{% block content %}
+<html>
+<head>
+    <title>Review Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222; /* Dark background for better contrast */
+            color: #5cc8e3; /* Bright white text color */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: #69c7f6; /* Bright white text color for table */
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        img {
+            width: 75vh;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard for {{ xname }}</h1>
+    <p>Number of reviews: {{ num_reviews }}</p>
+    <h2>Reviews:</h2>
+    <table>
+        <tr>
+            <th>S.NO</th>
+            <th>Company Name</th>
+            <th>REVIEWER AGE</th>
+            <th>Advantages</th>
+            <th>DISADVANTAGE</th>
+            <th>IMPROVEMENTS</th>
+            <th>RATINGS</th>
+        </tr>
+        {% for review in reviews %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ review.cname }}</td>
+            <td>{{ review.age }}</td>
+            <td>{{ review.advantages }}</td>
+            <td>{{ review.disadvantages }}</td>
+            <td>{{ review.improvements }}</td>
+            <td>{{ review.ratings }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Reward Points:</h2>
+    <p>Based on the number of reviews, the reviewer has earned {{ num_reviews * 10 }} reward points.</p>
+    <a href="/comp">CLICK HERE</a><p>GO TO COMPANY LIST</p>
+</body>
+</html>
+{% endblock %}

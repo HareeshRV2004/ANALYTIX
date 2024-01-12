@@ -1,0 +1,9 @@
+{%extends "base.html" %}
+{%block title%}
+database
+{%endblock%}
+{%block content%}
+	{%for x in values%}
+		<p>Name:{{x.ucompany_name}},Email:{{x.uemail}}</p>
+	{%endfor%}
+{%endblock%}

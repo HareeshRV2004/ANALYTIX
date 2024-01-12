@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .review {
+            margin: 10px 0;
+        }
+        .positive {
+            color: #4CAF50;
+        }
+        .negative {
+            color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Review Analysis</h1>
+    </div>
+    <div class="container">
+        <div class="category">Strengths:</div>
+        {% for review in insights.strengths %}
+        <div class="review positive">{{ review.text }}</div>
+        {% endfor %}
+        <div class="category">Weaknesses:</div>
+        {% for review in insights.weaknesses %}
+        <div class="review negative">{{ review.text }}</div>
+        {% endfor %}
+        <div class="category">Improvement Needed:</div>
+        {% for review in insights.improvement %}
+        <div class="review negative">{{ review.text }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>
