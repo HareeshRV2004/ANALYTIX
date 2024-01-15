@@ -68,3 +68,11 @@ I'm a passionate web developer at Coimbatore Institute of Technology, India, wit
 ## Feedback
 
 If you have any feedback, please reach out to us at hareeshrv2004@gmail.com
+
+## Contributors
+
+**Sanjith Sivendra:**[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sanjith-sivendra-k-0712a326b/)
+
+**Bharaninath:**[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/m-bharaninath-60713724a/)
+
+**Kamaliha:**[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kamaliha-m-b-8b557b259/)
