@@ -61,6 +61,9 @@ I'm a passionate web developer at Coimbatore Institute of Technology, India, wit
 
 ## 🔗 Links
 
+For more details,, ping me at
+
+
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hareesh-r-v-674522255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
 
@@ -71,8 +74,14 @@ If you have any feedback, please reach out to us at hareeshrv2004@gmail.com
 
 ## Contributors
 
-**Sanjith Sivendra:**[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sanjith-sivendra-k-0712a326b/)
+**Sanjith Sivendra:**
 
-**Bharaninath:**[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/m-bharaninath-60713724a/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sanjith-sivendra-k-0712a326b/)
 
-**Kamaliha:**[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kamaliha-m-b-8b557b259/)
+**Bharaninath:**
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/m-bharaninath-60713724a/)
+
+**Kamaliha:**
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kamaliha-m-b-8b557b259/)
